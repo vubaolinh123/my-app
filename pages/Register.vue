@@ -19,21 +19,26 @@
 <script lang="ts">
 import { Vue, Component } from 'nuxt-property-decorator'
 import store from '@/controllers/store'
-import controllers from '@/controllers/index'
+import controllers from '@/controllers'
 
 @Component({})
 export default class Register extends Vue {
-  first_name: string = ''
-  last_name: string = ''
-  email: string = ''
-  password: string = ''
+  first_name = ''
+  last_name = ''
+  email = ''
+  password = ''
 
   get user() {
     return store.value.user
   }
 
   async onSubmit() {
-    await controllers.Register(this.first_name,this.last_name , this.email, this.password)
+    await controllers.Register(
+      this.first_name,
+      this.last_name,
+      this.email,
+      this.password
+    )
   }
 }
 </script>

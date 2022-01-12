@@ -11,7 +11,11 @@
       <br />
       <button type="submit">Submit</button>
     </form>
-    {{ user }}
+    <!-- {{ user }} -->
+    <div>
+      <NuxtLink to="/register">Register</NuxtLink>
+      <NuxtLink to="/forgotpass">Forgot Password</NuxtLink>
+    </div>
   </div>
 </template>
 
@@ -36,8 +40,8 @@ export default class Login extends Vue {
 </script>
 
 <style lang="less">
-    .container{
-      margin: 0 auto;
-      width: 80%;
-    }
+.container {
+  margin: 0 auto;
+  width: 80%;
+}
 </style>
